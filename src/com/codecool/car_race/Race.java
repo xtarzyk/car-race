@@ -1,6 +1,13 @@
 package com.codecool.car_race;
 
+import com.codecool.car_race.vehicles.Vehicle;
+import java.util.LinkedList;
+import java.util.List;
+
+
 public class Race {
+
+    private final List<Vehicle> vehicles = new LinkedList<>();
 
     /**
      * Simulates the passing of time by advancing the weather and
@@ -17,4 +24,8 @@ public class Race {
         System.out.println("Race result");
     }
 
+
+    public void registerRacer(Vehicle racer) {
+        vehicles.add(racer);
+    }
 }
