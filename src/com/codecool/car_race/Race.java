@@ -21,7 +21,8 @@ public class Race {
      * race.
      */
     public void printRaceResults() {
-        System.out.println("Race result");
+        System.out.println("Race result:");
+        vehicles.forEach(System.out::println);
     }
 
 
