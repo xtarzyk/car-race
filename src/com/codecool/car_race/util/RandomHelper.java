@@ -48,4 +48,16 @@ public class RandomHelper {
 
         return possibilities[nextInt(possibilities.length)];
     }
+
+    /**
+     * Generate a random integer from a given range.
+     *
+     * @param lower lower limit of the range.
+     * @param upper upper limit of the range.
+     *
+     * @return      a random number between a lower and an upper bound.
+     */
+    public static int nextInt(int lower, int upper) {
+        return lower + nextInt(upper - lower);
+    }
 }

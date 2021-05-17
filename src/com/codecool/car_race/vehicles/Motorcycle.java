@@ -3,6 +3,11 @@ package com.codecool.car_race.vehicles;
 import com.codecool.car_race.Race;
 
 public class Motorcycle extends Vehicle{
+    private static final int NORMAL_SPEED = 100;
+
+    public Motorcycle() {
+        super(NORMAL_SPEED);
+    }
     /**
      * Motorcycles have names with serial numbers.  We have to track
      * the numbering on a class level that's why this field is static.

@@ -12,10 +12,11 @@ public abstract class Vehicle {
      * Create a vehicle with the given name and normal speed.
      * NOTE: normalSpeed could also have a setter method like generateName(),
      * that would have been a good solution too
+     * @param normalSpeed normal travelling speed of this vehicle.
      */
-    protected Vehicle() {
+    protected Vehicle(int normalSpeed) {
         this.name = generateName();
-        this.normalSpeed = 100;
+        this.normalSpeed = normalSpeed;
     }
     /**
      * child classes should implement naming inside this method
