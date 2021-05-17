@@ -29,4 +29,19 @@ public class Race {
     public void registerRacer(Vehicle racer) {
         vehicles.add(racer);
     }
+
+    /**
+     * Weather can be different for races ongoing parallel so each race has a weather
+     */
+    private Weather weather = new Weather();
+
+    /**
+     * A proxy method for checking the weather through the Race object.
+     *
+     * @return true if it is raining.
+     * @see Vehicle
+     */
+    public boolean isRaining() {
+        return weather.isRaining();
+    }
 }

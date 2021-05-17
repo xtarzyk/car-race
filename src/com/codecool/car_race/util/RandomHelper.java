@@ -60,4 +60,15 @@ public class RandomHelper {
     public static int nextInt(int lower, int upper) {
         return lower + nextInt(upper - lower);
     }
+
+
+    /**
+     * Determine whether an event has occured given the chance for it.
+     *
+     * @param chance the chance of the event happening in percents.
+     * @return       true if the event has happened.
+     */
+    public static boolean eventWithChance(int chance) {
+        return RANDOM.nextInt(100) < chance;
+    }
 }
