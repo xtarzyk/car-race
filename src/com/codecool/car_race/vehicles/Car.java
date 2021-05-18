@@ -54,8 +54,21 @@ public class Car extends Vehicle{
         return firstName + " " + lastName;
     }
 
+
+    /**
+     * Cars can travel with this speed when there is a broken
+     * truck on the tracks.
+     */
+    protected static final int YELLOW_FLAG_SPEED = 75;
+
+    /**
+     * If there is a broken truck on the track the actual speed is limited
+     * @param race instance of the current race from where we can access data
+     *             for example weather conditions and broken truck info
+     */
     @Override
     public void prepareForLap(Race race) {
-
+        if(race.isYellowFlagActive()) actualSpeed = YELLOW_FLAG_SPEED;
+        else actualSpeed = normalSpeed;
     }
 }

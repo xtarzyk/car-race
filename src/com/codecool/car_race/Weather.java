@@ -37,7 +37,7 @@ public class Weather {
     /**
      * Calculate the new state of the weather.
      */
-    private void randomize() {
+    public void randomize() {
         isRaining = RandomHelper.eventWithChance(CHANCE_OF_RAIN);
     }
 }
